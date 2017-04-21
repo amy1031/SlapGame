@@ -1,9 +1,13 @@
 var health = 100;
+var count;
 
 function slap() {
-    health--;
     //window.alert(health);
-    var count = health + 1;
+    count = health--;
+    update();
+}
+
+function update() {
     document.getElementById("health").innerText = count;
 }
 
