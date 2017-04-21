@@ -26,9 +26,9 @@ var mark = new Alien("Mark", 1, 5, 10)
 var amy = new Alien("Amy", 1, 2, 5)
 aliens.push(new Alien("Jake", 5, 15, 25))
 
-var boilingWater = new AttackOption("Boiling Water", 2, "Increase the speed that we cook the alien scum!")
+var boilingWater = new AttackOption("Boiling Water", 2, "Cook the alien scum faster!")
 var grind = new AttackOption("Grind!", 4, "Turn the alien course!")
-var flush = new AttackOption("Flush", 10, "Flush the alien down the toilet!")
+var sugar = new AttackOption("Suagr", 10, "Aliens hate sugar!")
 
 function attack(targetPlayer, attackType) { 
     //window.alert(health);
