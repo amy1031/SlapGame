@@ -1,1 +1,22 @@
-/*Only use this file if you want to override bootstrap or create your own style*/
+body {
+    background-image: url("http://i.imgur.com/hR2CCDw.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #443979;
+}
+
+h1 {
+    font-family: Bungee Shade;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 46px;
+}
+
+h2 {
+    font-family: Bungee;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 0px;
+}
