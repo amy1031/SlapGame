@@ -15,22 +15,26 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1 class="text-center">Aliens Attack!</h1>
+				<h1 class="text-center">Cosmic Coffee</h1>
 				<h2 class="text-center">Fight off the coffee stealing aliens</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<button class="button" id="slap" onClick="attack(mark, 'slap')">SLAP!</button>
-				<button class="button" id="punch" onClick="attack(mark, 'punch')">Punch</button>
-				<button class="button" id="kick" onClick="attack(mark, 'kick')">Kick</button>
+		<div class="alien text-center">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>First Target: <span id="name">Mark</span></h3>
+					<h4>Health: <span id="health">100</span></h4>
+					<h4>Hits: <span id="hits">0</span></h5>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<span>Target Name: <span id="name">Mark</span></span><br>
-				<span>Health: <span id="health">100</span></span><br>
-				<span>Hits: <span id="hits">0</span></span>
+		<div class="attacks text-center">
+			<div class="row">
+				<div class="col-xs-12">
+					<button class="button" id="slap" onClick="attack(mark, 'roast')">Roast</button>
+					<button class="button" id="punch" onClick="attack(mark, 'burn')">Burn</button>
+					<button class="button" id="kick" onClick="attack(mark, 'tamper')">Tamper</button>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -2,15 +2,15 @@
 //var name = document.getElementById("name").innerText = "Alien";
 //var hits = 0;
 
-function Alien(name, slap, punch, kick){
+function Alien(name, roast, burn, tamper){
     this.name = name;
     this.img = "https://robohash.org/" +name+"?set=set2";
     this.health = 100;
     this.hits = 0;
     this.attacks = {
-        slap: slap,
-        punch: punch,
-        kick: kick
+        roast: roast,
+        burn: burn,
+        tamper: tamper
     }
 }
 
