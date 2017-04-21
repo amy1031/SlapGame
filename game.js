@@ -14,8 +14,13 @@ function Alien(name, roast, burn, tamper){
     }
 }
 
+var aliens = []
 var mark = new Alien("Mark", 1, 5, 10)
 var amy = new Alien("Amy", 1, 2, 5)
+aliens.push(mark)
+aliens.push(new Alien("Jake", 5, 15, 25))
+
+
 
 
 function attack(targetPlayer, attackType) { 
@@ -37,13 +42,17 @@ function attack(targetPlayer, attackType) {
 //     update();
 // }
 
+var strength = ["Strong", "Medium", "Weak"];
+var randomStrength = strength[Math.floor(Math.random() * strength.length)];
+
 function update(targetPlayer) {
     document.getElementById("health").innerText = targetPlayer.health;
     targetPlayer.health = targetPlayer.health;
     document.getElementById("hits").innerText = targetPlayer.hits;
 
     if (targetPlayer.health <= 0) {
-        document.getElementById("health").innerText = targetPlayer.name + " is Dead!";
+
+        document.getElementById("health").innerText = targetPlayer.name + " coffee is ready! Coffee strength is " + randomStrength;
     }
 }
 

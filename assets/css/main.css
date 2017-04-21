@@ -1,0 +1,63 @@
+body {
+  background-image: url("http://i.imgur.com/hR2CCDw.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #443979;
+}
+
+h1 {
+  font-family: Bungee Shade;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 46px;
+}
+
+h2 {
+  font-family: Bungee;
+  color: #fff;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+h3 {
+  color: #fff;
+  font-family: helvetica;
+  font-size: 22px;
+}
+
+h4 {
+  color: #fff;
+  font-family: helvetica;
+  font-size: 20px;
+}
+
+h5 {
+  color: #fff;
+  font-family: helvetica;
+  font-size: 18px;
+}
+
+.btn {
+  color: #fff;
+  font-family: helvetica;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px 30px;
+}
+
+.roast {
+  background-color: #7522f4;
+  border: 1px solid #fff;
+}
+
+.burn {
+  background-color: #571147;
+  border: 1px solid #fff;
+}
+
+.tamper {
+  background-color: #250e38;
+  border: 1px solid #fff;
+}
