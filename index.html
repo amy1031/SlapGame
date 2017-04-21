@@ -7,14 +7,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="game.css">
-	<title>Slap Game!</title>
+	<title>Alien Attack!</title>
 </head>
 
 <body>
-	<h1 class="text-center">Slap Game</h1>
-	<button class="button" id="slap" onClick="slap()">SLAP!</button>
-	<button class="button" id="punch" onClick="punch()">Punch</button>
-	<button class="button" id="kick" onClick="kick()">Kick</button>
+	<h1 class="text-center">Alien Attack Game</h1>
+	<button class="button" id="slap" onClick="attack(mark, 'slap')">SLAP!</button>
+	<button class="button" id="punch" onClick="attack(mark, 'punch')">Punch</button>
+	<button class="button" id="kick" onClick="attack(mark, 'kick')">Kick</button>
 	<br>
 	<span>Target Name: <span id="name"></span></span><br>
 	<span>Health: <span id="health">100</span></span><br>
