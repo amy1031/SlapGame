@@ -2,9 +2,9 @@
 //var name = document.getElementById("name").innerText = "Alien";
 //var hits = 0;
 
-function Alien(name, roast, burn, tamper){
+function Alien(name, roast, burn, tamper) {
     this.name = name;
-    this.img = "https://robohash.org/" +name+"?set=set2";
+    this.img = "https://robohash.org/" + name + "?set=set2";
     this.health = 100;
     this.hits = 0;
     this.attacks = {
@@ -12,16 +12,23 @@ function Alien(name, roast, burn, tamper){
         burn: burn,
         tamper: tamper
     }
+    this.items = [];
+}
+
+function AttackOption(name, value, description) {
+    this.name = name;
+    this.value = value;
+    this.description = description;
 }
 
 var aliens = []
 var mark = new Alien("Mark", 1, 5, 10)
 var amy = new Alien("Amy", 1, 2, 5)
-aliens.push(mark)
 aliens.push(new Alien("Jake", 5, 15, 25))
 
-
-
+var boilingWater = new AttackOption("Boiling Water", 2, "Increase the speed that we cook the alien scum!")
+var grind = new AttackOption("Grind!", 4, "Turn the alien course!")
+var flush = new AttackOption("Flush", 10, "Flush the alien down the toilet!")
 
 function attack(targetPlayer, attackType) { 
     //window.alert(health);
