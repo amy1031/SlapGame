@@ -27,6 +27,6 @@ function update() {
     document.getElementById("hits").innerText = hits;
 
     if (health <= 0) {
-        document.getElementById("health").innerText = "He's Dead!";
+        document.getElementById("health").innerText = name + " is Dead!";
     }
 }
