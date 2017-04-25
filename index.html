@@ -28,16 +28,23 @@
 			<div class="row">
 				<div class="col-sm-1">
 				</div>
-				<div class="col-xs-6 col-sm-5 text-right">
+				<div class="col-xs-6 col-sm-4 text-right">
 					<span class="pull-right"><img src="http://i.imgur.com/WrFycok.png" class="img-responsive"></span>
 				</div>
-				<div class="col-xs-6 col-sm-5 text-center">
+				<div class="col-xs-6 col-sm-3 text-center">
 					<h3>First Target: <span id="name">Mark</span></h3><br>
 					<h4>Health: <span id="health">100</span></h4><br>
 					<h4>Hits: <span id="hits">0</span></h5><br>
 						<button type="button" class="btn roast" id="slap" onClick="attack(mark, 'roast')">Roast</button><br>
 						<button type="button" class="btn burn" id="punch" onClick="attack(mark, 'burn')">Burn</button><br>
 						<button type="button" class="btn tamper" id="kick" onClick="attack(mark, 'tamper')">Tamper</button>
+				</div>
+				<div class="col-sm-3 text-center">
+					<h3>Bonus Attacks</h3>
+					<br>
+					<button type="button" class="btn boil" id="boil" onClick="giveItem(mark, 'boilingWater')">Boil</button>
+					<button type="button" class="btn grind" id="boil" onClick="giveItem(mark, 'grind')">Grind</button>
+					<button type="button" class="btn sugar" id="boil" onClick="giveItem(mark, 'sugar')">Sugar Attack</button>
 				</div>
 				<div class="col-sm-1">
 				</div>

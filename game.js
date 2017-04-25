@@ -10,28 +10,40 @@ function Alien(name, roast, burn, tamper) {
         roast: roast,
         burn: burn,
         tamper: tamper
-    }
-    this.items = [];
-}
+    };
+    this.items = {};
+    aliens.push(this);
+};
 
-function AttackOption(name, value, description) {
+function Item(name, value, description) {
     this.name = name;
     this.value = value;
     this.description = description;
+
+};
+
+function giveItem(targetPlayer, type){
+    targetPlayer.items[type] = modifiers[type]
+   // console.log(targetPlayer.items)
 }
 
-var aliens = []
-var mark = new Alien("Mark", 1, 5, 10)
-var amy = new Alien("Amy", 1, 2, 5)
-aliens.push(new Alien("Jake", 5, 15, 25))
+var aliens = [];
+var mark = new Alien("Mark", 1, 5, 10);
+var amy = new Alien("Amy", 1, 2, 5);
+var jake = new Alien("Jake", 5, 15, 25);
+//aliens.push(new Alien("Jake", 5, 15, 25))
 
-var boilingWater = new AttackOption("Boiling Water", 2, "Cook the alien scum faster!")
-var grind = new AttackOption("Grind!", 4, "Turn the alien course!")
-var sugar = new AttackOption("Sugar", 10, "Aliens hate sugar!")
+
+var modifiers = {};
+modifiers.boilingWater = new Item("Boiling Water", 2, "Cook the alien scum faster!");
+modifiers.grind = new Item("Grind!", 4, "Turn the alien course!");
+modifiers.sugar = new Item("Sugar", 10, "Aliens hate sugar!");
+
 
 function attack(targetPlayer, attackType) { 
     //window.alert(health);
-    targetPlayer.health = targetPlayer.health - targetPlayer.attacks[attackType];
+    var mod = calcItems(targetPlayer)
+    targetPlayer.health = targetPlayer.health - (targetPlayer.attacks[attackType]+mod);
     targetPlayer.hits++;
     update(targetPlayer);
 }
@@ -61,4 +73,13 @@ function update(targetPlayer) {
         document.getElementById("health").innerText = targetPlayer.name + " coffee is ready! Coffee strength is " + randomStrength;
     }
 }
+
+function calcItems(targetPlayer) {
+    var total = 0;
+    for(var mod in targetPlayer.items) {
+        total += targetPlayer.items[mod].value;
+    } 
+    console.log(total)
+    return total;
+} 
 
