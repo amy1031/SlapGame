@@ -35,16 +35,16 @@
 					<h3>First Target: <span id="name">Mark</span></h3><br>
 					<h4>Health: <span id="health">100</span></h4><br>
 					<h4>Hits: <span id="hits">0</span></h5><br>
-						<button type="button" class="btn roast" id="slap" onClick="attack(mark, 'roast')">Roast</button><br>
-						<button type="button" class="btn burn" id="punch" onClick="attack(mark, 'burn')">Burn</button><br>
-						<button type="button" class="btn tamper" id="kick" onClick="attack(mark, 'tamper')">Tamper</button>
+						<button type="button" class="btn roast" id="slap" onClick="app.controllers.AlienController.attack(mark, 'roast')">Roast</button><br>
+						<button type="button" class="btn burn" id="punch" onClick="app.controllers.AlienController.attack(mark, 'burn')">Burn</button><br>
+						<button type="button" class="btn tamper" id="kick" onClick="app.controllers.AlienController.attack(mark, 'tamper')">Tamper</button>
 				</div>
 				<div class="col-sm-3 text-center">
 					<h3>Bonus Attacks</h3>
 					<br>
-					<button type="button" class="btn boil" id="boil" onClick="giveItem(mark, 'boilingWater')">Boil</button>
-					<button type="button" class="btn grind" id="boil" onClick="giveItem(mark, 'grind')">Grind</button>
-					<button type="button" class="btn sugar" id="boil" onClick="giveItem(mark, 'sugar')">Sugar Attack</button>
+					<button type="button" class="btn boil" id="boil" onClick="app.controllers.AlienController.giveItem(mark, 'boilingWater')">Boil</button>
+					<button type="button" class="btn grind" id="boil" onClick="app.controllers.AlienController.giveItem(mark, 'grind')">Grind</button>
+					<button type="button" class="btn sugar" id="boil" onClick="app.controllers.AlienController.giveItem(mark, 'sugar')">Sugar Attack</button>
 				</div>
 				<div class="col-sm-1">
 				</div>
@@ -58,7 +58,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="game.js"></script>
+	<script src="game-service.js"></script>
+	<script src="game-controller.js"></script>
+	<script src="game2.js"></script>
 </body>
 
 </html>
