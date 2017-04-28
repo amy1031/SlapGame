@@ -33,14 +33,14 @@ function AlienService() {
         this.description = description;
     };
 
-    var modifiers = {};
-    modifiers.boilingWater = new Item("Boiling Water", 2, "Cook the alien scum faster!");
-    modifiers.grind = new Item("Grind", 4, "Turn the alien coarse!");
-    modifiers.sugar = new Item("Sugar", 10, "Aliens hate sugar!");
+    var items = {};
+    items.boilingWater = new Item("Boiling Water", 2, "Cook the alien scum faster!");
+    items.grind = new Item("Grind", 4, "Turn the alien coarse!");
+    items.sugar = new Item("Sugar", 10, "Aliens hate sugar!");
 
     function getItems(targetName) {
-    for (var i = 0; i < modifiers.length; i++) {
-      var item = modifiers[i]
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i]
       if(item.name == targetName){
         return item
             }
@@ -56,15 +56,15 @@ function AlienService() {
     this.calcItems = function calcItems(targetPlayer) {
         var total = 0;
         for(var mod in targetPlayer.items) {
-           // debugger
-            total += targetPlayer.items[mod].value;
+            //debugger
+            total += targetPlayer.items[mod][value];
             } 
        // console.log(total)
         return total;
     }
 
-    this.getModifiers = function(targetName) {
-        return modifiers(targetName)
+    this.getItems = function(targetName) {
+        return getItems(targetName)
     }
 
     // this.giveItem = function giveItem(targetPlayer, type) {
