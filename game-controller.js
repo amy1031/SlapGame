@@ -26,4 +26,10 @@ function AlienController() {
         targetAlien.hits++;
         this.update(targetAlien);
     }
+
+    this.giveItem = function giveItem(targetPlayer, type) {
+        var targetAlien = alienService.getAlien(targetPlayer);
+        targetAlien.items[type] = alienService.getModifiers[type]
+        // console.log(targetPlayer.items)
+    }
 }
