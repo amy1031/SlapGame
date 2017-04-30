@@ -9,7 +9,7 @@ function AlienService() {
             burn: burn,
             tamper: tamper
         };
-        this.items = {};
+        this.items = [];
         aliens.push(this);
     };
 
@@ -33,15 +33,16 @@ function AlienService() {
         this.description = description;
     };
 
-    var items = {};
-    items.boilingWater = new Item("Boiling Water", 2, "Cook the alien scum faster!");
-    items.grind = new Item("Grind", 4, "Turn the alien coarse!");
-    items.sugar = new Item("Sugar", 10, "Aliens hate sugar!");
+    var items = {
+        boilingWater: new Item("Boiling Water", 2, "Cook the alien scum faster!"),
+        grind: new Item("Grind", 4, "Turn the alien coarse!"),
+        sugar: new Item("Sugar", 10, "Aliens hate sugar!")
+    };
 
-    function getItems(targetName) {
+    function getItems(itemType) {
     for (var i = 0; i < items.length; i++) {
       var item = items[i]
-      if(item.name == targetName){
+      if(item.name == itemType){
         return item
             }
         }
@@ -57,9 +58,9 @@ function AlienService() {
         var total = 0;
         for(var mod in targetPlayer.items) {
             //debugger
-            total += targetPlayer.items[mod][value];
+            total += targetPlayer.items[mod].value
             } 
-       // console.log(total)
+       //console.log(total)
         return total;
     }
 

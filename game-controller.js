@@ -22,6 +22,7 @@ function AlienController() {
         //window.alert(health);
         var targetAlien = alienService.getAlien(targetPlayer);
         var mod = alienService.calcItems(targetAlien)
+
         targetAlien.health = targetAlien.health - (targetAlien.attacks[attackType] + mod);
         targetAlien.hits++;
         this.update(targetAlien);
@@ -31,4 +32,9 @@ function AlienController() {
         var targetAlien = alienService.getAlien(targetPlayer);
         targetAlien.items[type] = alienService.getItems[type]
     }
+
+
+    // function giveItem(targetPlayer, type){
+    // targetPlayer.items[type] = modifiers[type]
+   // console.log(targetPlayer.items)
 }
