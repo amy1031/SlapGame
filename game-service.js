@@ -54,11 +54,14 @@ function AlienService() {
         return getAlien(targetName)
     }
 
-    this.addMods = function addMods(targetPlayer) {
+    this.calcItems = function calcItems(targetPlayer) {
         var total = 0;
-        for(var mod in targetPlayer.items) {
-            //debugger
-            total += targetPlayer.items[mod].value
+        for (var i = 0; i < targetPlayer.items.length; i++) {
+            var mod = targetPlayer.items[i];
+            total += mod.value;
+        // for(var mod in targetPlayer.items) {
+        //     //debugger
+        //     total += targetPlayer.items[mod].value;
             } 
        //console.log(total)
         return total;
