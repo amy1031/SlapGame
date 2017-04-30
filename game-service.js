@@ -39,14 +39,14 @@ function AlienService() {
         sugar: new Item("Sugar", 10, "Aliens hate sugar!")
     };
 
-    function getItems(itemType) {
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i]
-      if(item.name == itemType){
-        return item
-            }
-        }
-    }
+    // function getItems(itemType) {
+    // for (var i = 0; i < items.length; i++) {
+    //   var item = items[i]
+    //   if(item.name == itemType){
+    //     return item
+    //         }
+    //     }
+    // }
 
 
     // PUBLIC
@@ -54,19 +54,19 @@ function AlienService() {
         return getAlien(targetName)
     }
 
-    this.calcItems = function calcItems(targetPlayer) {
-        var total = 0;
-        for(var mod in targetPlayer.items) {
-            //debugger
-            total += targetPlayer.items[mod].value
-            } 
-       //console.log(total)
-        return total;
-    }
+    // this.calcItems = function calcItems(targetPlayer) {
+    //     var total = 0;
+    //     for(var mod in targetPlayer.items) {
+    //         //debugger
+    //         total += targetPlayer.items[mod].value
+    //         } 
+    //    //console.log(total)
+    //     return total;
+    // }
 
-    this.getItems = function(targetName) {
-        return getItems(targetName)
-    }
+    // this.getItems = function(targetName) {
+    //     return getItems(targetName)
+    // }
 
     // this.giveItem = function giveItem(targetPlayer, type) {
     //     targetPlayer.items[type] = modifiers[type]

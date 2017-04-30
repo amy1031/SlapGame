@@ -21,17 +21,17 @@ function AlienController() {
     this.attack = function attack(targetPlayer, attackType) { 
         //window.alert(health);
         var targetAlien = alienService.getAlien(targetPlayer);
-        var mod = alienService.calcItems(targetAlien)
+        //var mod = alienService.calcItems(targetAlien)
 
-        targetAlien.health = targetAlien.health - (targetAlien.attacks[attackType] + mod);
+        targetAlien.health = targetAlien.health - targetAlien.attacks[attackType];
         targetAlien.hits++;
         this.update(targetAlien);
     }
 
-    this.giveItem = function giveItem(targetPlayer, type) {
-        var targetAlien = alienService.getAlien(targetPlayer);
-        targetAlien.items[type] = alienService.getItems[type]
-    }
+    // this.giveItem = function giveItem(targetPlayer, type) {
+    //     var targetAlien = alienService.getAlien(targetPlayer);
+    //     targetAlien.items[type] = alienService.getItems[type]
+    // }
 
 
     // function giveItem(targetPlayer, type){
