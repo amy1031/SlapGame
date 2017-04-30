@@ -21,7 +21,7 @@ function AlienController() {
     this.attack = function attack(targetPlayer, attackType) { 
         //window.alert(health);
         var targetAlien = alienService.getAlien(targetPlayer);
-        var mod = alienService.calcItems(targetAlien)
+        var mod = alienService.calcItems(targetAlien);
 
         targetAlien.health = targetAlien.health - (targetAlien.attacks[attackType] + mod);
         targetAlien.hits++;

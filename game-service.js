@@ -59,11 +59,7 @@ function AlienService() {
         for (var i = 0; i < targetPlayer.items.length; i++) {
             var mod = targetPlayer.items[i];
             total += mod.value;
-        // for(var mod in targetPlayer.items) {
-        //     //debugger
-        //     total += targetPlayer.items[mod].value;
             } 
-       //console.log(total)
         return total;
     }
 
