@@ -39,6 +39,7 @@ function AlienService() {
         sugar: new Item("Sugar", 10, "Aliens hate sugar!")
     };
 
+    // Loop through items
     function getItems(itemType) {
     for (var i = 0; i < items.length; i++) {
       var item = items[i]
@@ -54,18 +55,25 @@ function AlienService() {
         return getAlien(targetName)
     }
 
-    this.calcItems = function calcItems(targetPlayer) {
+
+    // Calculate the extra item value and pass it to the controller
+    this.calcItems = function calcItems(targetName) {
         var total = 0;
-        for (var i = 0; i < targetPlayer.items.length; i++) {
-            var mod = targetPlayer.items[i];
+        for (var i = 0; i < targetName.items.length; i++) {
+            //debugger
+            var mod = targetName.items[i];
             total += mod.value;
             } 
         return total;
     }
 
+
+    // Get Items for the controller
     this.getItems = function(targetName) {
         return getItems(targetName)
     }
+
+
 
     // this.giveItem = function giveItem(targetPlayer, type) {
     //     targetPlayer.items[type] = modifiers[type]
