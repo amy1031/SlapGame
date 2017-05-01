@@ -37,7 +37,7 @@ function AlienController() {
     // Items buttons
     this.giveItem = function giveItem(targetPlayer, type) {
         var targetAlien = alienService.getAlien(targetPlayer);
-        targetAlien.items[type] = alienService.getItems[type]
+        targetAlien.items[type] = alienService.getItem[type]
     }
 
 }

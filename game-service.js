@@ -40,7 +40,7 @@ function AlienService() {
     };
 
     // Loop through items
-    function getItems(itemType) {
+    function getItem(itemType) {
     for (var i = 0; i < items.length; i++) {
       var item = items[i]
       if(item.name == itemType){
@@ -69,8 +69,8 @@ function AlienService() {
 
 
     // Get Items for the controller
-    this.getItems = function(targetName) {
-        return getItems(targetName)
+    this.getItem = function(targetName) {
+        return getItem(targetName)
     }
 
 
