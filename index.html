@@ -21,7 +21,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<hr width="75%">
+				<hr width="80%">
 			</div>
 		</div>
 		<div class="alien-attacks">
@@ -39,16 +39,15 @@
 						<button type="button" class="btn burn" id="punch" onClick="app.controllers.alienController.attack('Mark', 'burn')">Burn</button><br>
 						<button type="button" class="btn tamper" id="kick" onClick="app.controllers.alienController.attack('Mark', 'tamper')">Tamper</button>
 				</div>
-				<div class="col-sm-3 text-center">
+				<div class="col-sm-4 text-center">
 					<h3>Bonus Attacks</h3>
 					<p>(Single Use)</p>
-					<br>
-					<button type="button" class="btn boil" id="boil" onClick="app.controllers.alienController.giveItem('Mark', 'boilingWater'); this.disabled=true"><img src="http://i.imgur.com/hlCDQC3.png" style="width: 75px"></button>
-					<button type="button" class="btn grind" id="grind" onClick="app.controllers.alienController.giveItem('Mark', 'grind'); this.disabled=true">Grind</button>
-					<button type="button" class="btn sugar" id="sugar" onClick="app.controllers.alienController.giveItem('Mark', 'sugar'); this.disabled=true">Sugar Attack</button>
+					<button type="button" class="btn boil" id="boil" onClick="app.controllers.alienController.giveItem('Mark', 'boilingWater'); this.disabled=true"><img src="http://i.imgur.com/hlCDQC3.png" style="width:75px" class="img-responsive" alt="Boiling Water!"></button>
+					<button type="button" class="btn grind" id="grind" onClick="app.controllers.alienController.giveItem('Mark', 'grind'); this.disabled=true"><img src="http://i.imgur.com/U8mjc5x.png" style="width:75px" class="img-responsive" alt="Grind them up!"></button>
+					<button type="button" class="btn sugar" id="sugar" onClick="app.controllers.alienController.giveItem('Mark', 'sugar'); this.disabled=true"><img src="http://i.imgur.com/30MKnDq.png" style="width:75px" class="img-responsive" alt="Melt them with sugar!"></button>
 				</div>
-				<div class="col-sm-1">
-				</div>
+				<!--<div class="col-sm-1">
+				</div>-->
 			</div>
 		</div>
 		<div class="moon">
