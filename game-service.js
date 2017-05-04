@@ -9,7 +9,7 @@ function AlienService() {
             burn: burn,
             tamper: tamper
         };
-        this.items = [];
+        this.items = {};
         aliens.push(this);
     };
 
@@ -40,11 +40,13 @@ function AlienService() {
     };
 
     // Loop through items
-    function getItem(itemType) {
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i]
-      if(item.name == itemType){
-        return item
+    function getItem(targetName, itemTypes) {
+        for (var i = 0; i < aliens.length; i++) {
+            var alien = aliens[i];
+            if(alien.name == targetName) {
+                alien.items = items[itemTypes];
+                console.log(alien)
+                return
             }
         }
     }
@@ -57,23 +59,32 @@ function AlienService() {
 
 
     // Calculate the extra item value and pass it to the controller
-    this.calcItems = function calcItems(targetName) {
-        var total = 0;
-        for (var i = 0; i < targetName.items.length; i++) {
-            //debugger
-            var mod = targetName.items[i];
-            total += mod.value;
-            } 
+    this.calcItems = function calcItems(targetAlien) {
+       //debugger
+        var total = 1;
+            if(targetAlien.items == items.boilingWater) {
+                total += items.boilingWater.value;
+            }
+            if(targetAlien.items == items.grind) {
+                total += items.grind.value;
+            }
+            if(targetAlien.items == items.sugar) {
+                total += items.sugar.value;
+            }
         return total;
     }
 
 
     // Get Items for the controller
-    this.getItem = function(targetName) {
-        return getItem(targetName)
+    this.getItem = function(targetName, itemType) {
+        return getItem(targetName, itemType)
     }
 
-
+    this.clearMods = function(targetName) {
+        //debugger
+        var target = getAlien(targetName.name)
+        target.items = {};
+    }
 
     // this.giveItem = function giveItem(targetPlayer, type) {
     //     targetPlayer.items[type] = modifiers[type]

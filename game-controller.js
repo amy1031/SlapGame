@@ -8,7 +8,7 @@ function AlienController() {
 
     //PUBLIC
 
-    // Update the screen
+    // Updates the screen
     this.update = function update(targetPlayer) {
         //var targetAlien = alienService.getAlien(targetPlayer);
         document.getElementById("health").innerText = `Health: ${targetPlayer.health}`;
@@ -20,7 +20,6 @@ function AlienController() {
         }
     }
 
-
     // Attack buttons
     this.attack = function attack(targetPlayer, attackType) { 
         //window.alert(health);
@@ -28,16 +27,16 @@ function AlienController() {
 
         var mod = alienService.calcItems(targetAlien);
         //debugger
-        targetAlien.health = targetAlien.health - (targetAlien.attacks[attackType] + mod);
+        targetAlien.health = targetAlien.health - (targetAlien.attacks[attackType] * mod);
+        alienService.clearMods(targetAlien);
         targetAlien.hits++;
         this.update(targetAlien);
     }
 
-
     // Items buttons
     this.giveItem = function giveItem(targetPlayer, type) {
-        var targetAlien = alienService.getAlien(targetPlayer);
-        targetAlien.items[type] = alienService.getItem[type]
+       // debugger
+        alienService.getItem(targetPlayer, type)
     }
 
 }
