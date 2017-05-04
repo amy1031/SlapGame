@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="container align-middle">
 		<div class="row">
 			<div class="col-xs-12">
 				<h1 class="text-center">Cosmic Coffee</h1>
@@ -28,18 +28,18 @@
 			<div class="row">
 				<div class="col-sm-1">
 				</div>
-				<div class="col-xs-6 col-sm-4 text-right">
+				<div class="col-xs-4 col-sm-4 text-right">
 					<span class="pull-right"><img src="http://i.imgur.com/WrFycok.png" class="img-responsive"></span>
 				</div>
-				<div class="col-xs-6 col-sm-3 text-center">
+				<div class="col-xs-4 col-sm-3 text-center">
 					<h3 class="target">Target: <span id="name">Mark</span></h3><br>
 					<h4><span id="health">Health: 100</span></h4><br>
 					<h4>Hits: <span id="hits">0</span></h5><br>
-						<button type="button" class="btn roast" id="slap" onClick="app.controllers.alienController.attack('Mark', 'roast')">Roast</button><br>
-						<button type="button" class="btn burn" id="punch" onClick="app.controllers.alienController.attack('Mark', 'burn')">Burn</button><br>
-						<button type="button" class="btn tamper" id="kick" onClick="app.controllers.alienController.attack('Mark', 'tamper')">Tamper</button>
+						<button type="button" class="btn roast" id="slap" onClick="app.controllers.alienController.attack('Mark', 'roast')"><i class="fa fa-thermometer fa-1x" aria-hidden="true"></i> Roast</button><br>
+						<button type="button" class="btn burn" id="punch" onClick="app.controllers.alienController.attack('Mark', 'burn')"><i class="fa fa-fire fa-1x" aria-hidden="true"></i> Burn</button><br>
+						<button type="button" class="btn tamper" id="kick" onClick="app.controllers.alienController.attack('Mark', 'tamper')"><i class="fa fa-gavel fa-1x" aria-hidden="true"></i> Tamper</button>
 				</div>
-				<div class="col-sm-4 text-center">
+				<div class="col-xs-4 col-sm-4 text-center">
 					<h3>Bonus Attacks!</h3>
 					<p>(Single Use)</p>
 					<button type="button" class="btn boil" id="boil" onClick="app.controllers.alienController.giveItem('Mark', 'boilingWater'); this.disabled=true"><img src="http://i.imgur.com/hlCDQC3.png" style="width:75px" class="img-responsive" alt="Boiling Water!"></button>
@@ -61,6 +61,7 @@
 	<script src="game-service.js"></script>
 	<script src="game-controller.js"></script>
 	<script src="game.js"></script>
+	<script src="https://use.fontawesome.com/e9e2e5fa0c.js"></script>
 </body>
 
 </html>
