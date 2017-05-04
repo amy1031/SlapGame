@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Audiowide" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Audiowide|Bangers" rel="stylesheet">
 	<title>Cosmic Coffee</title>
 </head>
 
@@ -21,7 +21,7 @@
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<hr width="80%">
+				<hr width="85%">
 			</div>
 		</div>
 		<div class="alien-attacks">
@@ -32,7 +32,7 @@
 					<span class="pull-right"><img src="http://i.imgur.com/WrFycok.png" class="img-responsive"></span>
 				</div>
 				<div class="col-xs-6 col-sm-3 text-center">
-					<h3>First Target: <span id="name">Mark</span></h3><br>
+					<h3 class="target">Target: <span id="name">Mark</span></h3><br>
 					<h4><span id="health">Health: 100</span></h4><br>
 					<h4>Hits: <span id="hits">0</span></h5><br>
 						<button type="button" class="btn roast" id="slap" onClick="app.controllers.alienController.attack('Mark', 'roast')">Roast</button><br>
@@ -40,7 +40,7 @@
 						<button type="button" class="btn tamper" id="kick" onClick="app.controllers.alienController.attack('Mark', 'tamper')">Tamper</button>
 				</div>
 				<div class="col-sm-4 text-center">
-					<h3>Bonus Attacks</h3>
+					<h3>Bonus Attacks!</h3>
 					<p>(Single Use)</p>
 					<button type="button" class="btn boil" id="boil" onClick="app.controllers.alienController.giveItem('Mark', 'boilingWater'); this.disabled=true"><img src="http://i.imgur.com/hlCDQC3.png" style="width:75px" class="img-responsive" alt="Boiling Water!"></button>
 					<button type="button" class="btn grind" id="grind" onClick="app.controllers.alienController.giveItem('Mark', 'grind'); this.disabled=true"><img src="http://i.imgur.com/U8mjc5x.png" style="width:75px" class="img-responsive" alt="Grind them up!"></button>
