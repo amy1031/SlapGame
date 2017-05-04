@@ -41,6 +41,10 @@ h5 {
   font-size: 18px;
 }
 
+p {
+  color: #fff;
+}
+
 .moon {
   position: fixed;
   left: 0;
